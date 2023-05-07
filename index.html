@@ -7,14 +7,14 @@
 </head>
 
 <body>
-    <p>Boxes: nil</p>
-
-    var Boxes = 0;
-    var boxes = Boxes;
+    <p id="boxes-text">Boxes: 0</p>
 
     <input type="button" value="Craft a Box" onclick="bakeABox()">
 
     <script>
+
+        var Boxes = 0;
+        var boxes = Boxes;
 
         function bakeABox() {
             boxes += 1
