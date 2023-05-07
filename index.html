@@ -7,7 +7,19 @@
 </head>
 
 <body>
-    <p>Cookie: Goofy</p>
+    <p>Boxes: nil</p>
+
+    var Boxes = 0;
+    var boxes = Boxes;
+
+    <script>
+
+        function bakeABox() {
+            boxes += 1
+            document.getElementById("boxes-text").innerHTML = "Boxes: " + boxes;
+        }
+
+    </script>
 </body>
 
 
