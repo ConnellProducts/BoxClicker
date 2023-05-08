@@ -15,9 +15,12 @@
 
         var Boxes = 0;
         var boxes = Boxes;
+        var boxesPS;
+
 
         function bakeABox() {
             boxes += 1
+            boxesPS = boxes ^ 7
             document.getElementById("boxes-text").innerHTML = "Boxes: " + (boxes ^ 4);
         }
 
