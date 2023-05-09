@@ -17,11 +17,17 @@
             var Boxes = 0;
             var boxes = Boxes;
             var addAMT = 1;
+            
+            
+            function updateValues() {
+                document.getElementById("boxes-text").innerHTML = "Boxes: " + boxes;
+            }
 
 
             function bakeABox() {
                 boxes += addAMT
-                document.getElementById("boxes-text").innerHTML = "Boxes: " + boxes;
+                updateValues()
+
             }
 
             function buyUpgrade() {
@@ -29,6 +35,7 @@
                     addAMT += 1;
                     boxes -= 15;
                 }
+                updateValues()
 
             }
 
