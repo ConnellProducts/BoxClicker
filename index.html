@@ -10,16 +10,24 @@
     <p id="boxes-text">Boxes: 0</p>
 
     <input type="button" value="Craft a Box" onclick="bakeABox()">
+    <input type="button" value="Upgrade" onclick="buyUpgrade()">
 
     <script>
 
         var Boxes = 0;
         var boxes = Boxes;
+        var addAMT = 1;
 
 
         function bakeABox() {
-            boxes += 1
-            document.getElementById("boxes-text").innerHTML = "Boxes: " + boxes * boxes;
+            boxes += addAMT
+            document.getElementById("boxes-text").innerHTML = "Boxes: " + boxes;
+        }
+        
+        function buyUpgrade() {
+        if (boxes >= 15) {
+        addAMT += 1;
+        }
         }
         
         var img = document.createElement("img");
