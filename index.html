@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Delivery Box Clicker</title>
-    <link rel="stylesheet" href="HTML_Main.css">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Delivery Box Clicker</title>
+        <link rel="stylesheet" href="HTML_Main.css" />
+    </head>
 
-<body>
-    <p id="boxes-text">Boxes: 0</p>
+    <body>
+        <p id="boxes-text">Boxes: 0</p>
 
-    <input type="button" value="Craft a Box" onclick="bakeABox()">
-    <input type="button" value="Upgrade" onclick="buyUpgrade()">
+        <input type="button" value="Craft a Box" onclick="bakeABox()" />
+        <input type="button" value="Upgrade" onclick="buyUpgrade()" />
 
-    <script>
+        <script>
 
-        var Boxes = 0;
-        var boxes = Boxes;
-        var addAMT = 1;
+            var Boxes = 0;
+            var boxes = Boxes;
+            var addAMT = 1;
 
 
-        function bakeABox() {
-            boxes += addAMT
-            document.getElementById("boxes-text").innerHTML = "Boxes: " + boxes;
-        }
-        
-        function buyUpgrade() {
-        if (boxes >= 15 and boxes <= 150) {
+            function bakeABox() {
+                boxes += addAMT
+                document.getElementById("boxes-text").innerHTML = "Boxes: " + boxes;
+            }
+
+            function buyUpgrade() {
+            if (boxes >= 15 and boxes <= 150) {
             addAMT += 1;
             boxes -= 15;
-        }
+            };
             if (boxes >= 150 and boxes <= 1500) {
             addAMT += 10;
-                boxes -= 150;
-            }
+            boxes -= 150;
+            };
             if (boxes >= 1500) {
             addAMT += 100;
-                boxes -= 1500;
-            }
-        }
-        
-        var img = document.createElement("img");
-        img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9RuuN7cRGtwFjyvDDY6DaAaFFCEfA81KVfRJNNL4&s=0";
-        img.height = 240;
-        img.width = 200;
-        img.alt = "gogl";
-        
-        document.body.append(img);
+            boxes -= 1500;
+            };
+            };
 
-    </script>
-</body>
+            var img = document.createElement("img");
+            img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9RuuN7cRGtwFjyvDDY6DaAaFFCEfA81KVfRJNNL4&s=0";
+            img.height = 240;
+            img.width = 200;
+            img.alt = "gogl";
 
-
+            document.body.append(img);
+        </script>
+    </body>
 </html>
+
+
+        
+
+
+
+
+
+
+
