@@ -11,6 +11,7 @@
 
         <input type="button" value="Craft a Box" onclick="CraftBox()" />
         <input type="button" value="Hire a Crafter" onclick="purchaseUpgrade('Crafter')" />
+        <p>updated1</p>
 
         <p id="CrafterPrice"></p>
 
@@ -30,6 +31,7 @@
             var MaxUpgrade = 100;
             var CrafterPrice = null;
             var costtext = "Cost: ";
+            var BoxesPC = 1;
             
             
             function updateValues() {
@@ -39,7 +41,7 @@
 
 
             function CraftBox() {
-                boxes += addAMT
+                boxes += BoxesPC
                 updateValues()
 
             };
