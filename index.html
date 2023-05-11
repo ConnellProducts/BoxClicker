@@ -11,7 +11,7 @@
 
         <input type="button" value="Craft a Box" onclick="CraftBox()" />
         <input type="button" value="Hire a Crafter" onclick="purchaseUpgrade('Crafter')" />
-        <p>updated1</p>
+        <p>updated2</p>
 
         <p id="CrafterPrice"></p>
 
@@ -23,8 +23,10 @@
             var boxes = Boxes;
 
             var upgradePrices = {
-                "Crafter": 20,
+                ["Crafter"]: 20,
             };
+            
+           document.getElementById("CrafterPrice").innerHTML = upgradePrices["Crafter"];
 
             //var boxes = Boxes;
             var BoxesPS = 0;
