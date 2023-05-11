@@ -7,37 +7,49 @@
     </head>
 
     <body>
-        <p id="boxes-text">Boxes: 0</p>
+        <p id="BoxesValue">Boxes: 0</p>
 
-        <input type="button" value="Craft a Box" onclick="bakeABox()" />
-        <input type="button" value="Upgrade" onclick="buyUpgrade()" />
+        <input type="button" value="Craft a Box" onclick="CraftBox()" />
+        <input type="button" value="Hire a Crafter" onclick="purchaseUpgrade('Crafter')" />
+
+        <p id="CrafterPrice"></p>
+
+
 
         <script>
 
-            var Boxes = 0;
-            var boxes = Boxes;
-            var addAMT = 1;
+            var Boxes,boxes = 0,Boxes;
+
+            var upgradePrices = {
+                "Crafter": 20,
+            };
+
+            //var boxes = Boxes;
+            var BoxesPS = 0;
+            var MaxUpgrade = 100;
+            var CrafterPrice = null;
+            var costtext = "Cost: ";
             
             
             function updateValues() {
-                document.getElementById("boxes-text").innerHTML = "Boxes: " + boxes;
-            }
+                document.getElementById("BoxesValue").innerHTML = "Boxes: " + boxes;
+                document.getElementById("CrafterPrice").innerHTML = costtext + CrafterPrice;
+            };
 
 
-            function bakeABox() {
+            function CraftBox() {
                 boxes += addAMT
                 updateValues()
 
-            }
+            };
 
-            function buyUpgrade() {
-              if (boxes > 15) {
-                    addAMT += 1;
-                    boxes -= 15;
-                }
-                updateValues()
+            function purchaseUpgrade(upgrade) {
 
-            }
+                console.log(upgrade);
+                
+                updateValues();
+
+            };
 
             var img = document.createElement("img");
             img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9RuuN7cRGtwFjyvDDY6DaAaFFCEfA81KVfRJNNL4&s=0";
